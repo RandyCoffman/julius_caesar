@@ -10,4 +10,8 @@ class Caesar_cipher < Minitest::Test
 		assert_equal(Array, Alphabet.class)
 	end
 
+	def test_string
+		assert_equal("Be sure to drink your Ovaltine", caesar_cipher("Be sure to drink your Ovaltine"))
+	end
+
 end
