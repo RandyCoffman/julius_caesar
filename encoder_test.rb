@@ -6,13 +6,19 @@ class Caesar_cipher < Minitest::Test
 		assert_equal(true, true)
 	end
 
-	def test_array_of_alphabet
-		assert_equal(Array, Alphabet.class)
+	def test_string
+		assert_equal(String, caesar_cipher("string").class)
 	end
 
-	def test_string_encode
-		assert_equal("Be sure to drink your Ovaltine", caesar_cipher("Be sure to drink your Ovaltine"))
-		p caesar_cipher("Be sure to drink your Ovaltine")
+	def test_array
+		assert_equal(Array, convert("string").class)
 	end
 
+	def test_letter_to_number_in_array
+		assert_equal([97], convert("a"))
+	end
+
+	def test_numbers_to_letters_in_array
+		assert_equal([97, 98, 99], convert("abc"))
+	end
 end
