@@ -11,7 +11,8 @@ class Caesar_cipher < Minitest::Test
 	end
 
 	def test_string_encode
-		assert_equal("Fi wyvi xs hvmro csyv Szepxmri", caesar_cipher("Be sure to drink your Ovaltine", 5))
+		assert_equal("Be sure to drink your Ovaltine", caesar_cipher("Be sure to drink your Ovaltine"))
+		p caesar_cipher("Be sure to drink your Ovaltine")
 	end
 
 end
